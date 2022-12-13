@@ -1,5 +1,5 @@
 # MTSIT
-This is the GitHub repository for the paper: A. Y. Yıldız, E. Koç, A. Koç, **“Multivariate Time Series Imputation with Transformers”**, IEEE Signal Processing Letters, 2022. This paper is based on [Multivariate Time Series Transformer Framework](https://github.com/gzerveas/mvts_transformer) and extended on imputation tasks.
+This is the GitHub repository for the [paper](https://ieeexplore.ieee.org/document/9964035): A. Y. Yıldız, E. Koç, A. Koç, **“Multivariate Time Series Imputation with Transformers”**, IEEE Signal Processing Letters, 2022. This paper is based on [Multivariate Time Series Transformer Framework](https://github.com/gzerveas/mvts_transformer) and extended on imputation tasks.
 
 ## Datasets
 
