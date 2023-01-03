@@ -5,7 +5,7 @@ This is the GitHub repository for the [paper](https://ieeexplore.ieee.org/docume
 
 [Physionet Healthcare Dataset](https://physionet.org/content/challenge-2012/1.0.0/) and [Beijing Air Quality Dataset](https://www.microsoft.com/en-us/research/publication/forecasting-fine-grained-air-quality-based-on-big-data/) are used for imputation task.
 
-For any dataset, including Healthcare and Air Quality, `Pandas Time Series Data (ptsd)` format is used. We preprocess the datasets following [BRITS](https://github.com/caow13/BRITS). The input shapes are `(number of samples &#215; features &#215; time points)`. `.pickle` files for training inputs - labels, and test inputs - labels are stored in a folder. `--data_dir` option parameter holds the directory of this folder.
+For any dataset, including Healthcare and Air Quality, `Pandas Time Series Data (ptsd)` format is used. We preprocess the datasets following [BRITS](https://github.com/caow13/BRITS). The input shapes are (number of samples &#215; features &#215; time points). `.pickle` files for training inputs - labels, and test inputs - labels are stored in a folder. `--data_dir` option parameter holds the directory of this folder.
 
 ## Requirements
 
@@ -45,4 +45,4 @@ For Healthcare experiment:
 python src/main.py --output_dir experiments --name imputation_healthcare --records_file imputation_healthcare.xls --data_dir healthcare_data/ --data_class ptsd --pattern train --val_ratio 0.2 --epochs 400 --lr 0.001 --optimizer RAdam --pos_encoding learnable --task imputation --test_only testset --test_pattern test --load_model experiments/$experiment_name/checkpoints/model_best.pth --masking_ratio 0.1 --mask_distribution bernoulli
 ```
 
-After testing; three `numpy array` files are saved under the folder `visualize_data`, which are `target.npy`, `target_mask.npy` and `predictions.npy` whose shape are also `(number of samples &#215; features &#215; time points)`. These files correspond to the **ground-truth values**, the **masked indexes**, and the **imputed values** of the test data respectively. These can be used to visualize the time points of the testing data by selecting any sample index and any feature index.
+After testing; three `numpy array` files are saved under the folder `visualize_data`, which are `target.npy`, `target_mask.npy` and `predictions.npy` whose shape are also (number of samples &#215; features &#215; time points). These files correspond to the **ground-truth values**, the **masked indexes**, and the **imputed values** of the test data respectively. These can be used to visualize the time points of the testing data by selecting any sample index and any feature index.
