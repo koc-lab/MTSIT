@@ -5,7 +5,7 @@ This is the GitHub repository for the [paper](https://ieeexplore.ieee.org/docume
 
 [Physionet Healthcare Dataset](https://physionet.org/content/challenge-2012/1.0.0/) and [Beijing Air Quality Dataset](https://www.microsoft.com/en-us/research/publication/forecasting-fine-grained-air-quality-based-on-big-data/) are used for imputation task.
 
-For any dataset, including Healthcare and Air Quality, `Pandas Time Series Data (ptsd)` format is used. We preprocess the datasets following [BRITS](https://github.com/caow13/BRITS). The input shapes are (number of samples &#215; features &#215; time points). `.pickle` files for training inputs - labels, and test inputs - labels are stored in a folder. `--data_dir` option parameter holds the directory of this folder.
+For any dataset, including Healthcare and Air Quality, `Pandas Time Series Data (ptsd)` format is used. We preprocess the datasets following [BRITS](https://github.com/caow13/BRITS). Dataset is pre-processed into `numpy array` data with shapes (number of samples &#215; features &#215; time points). Afterwards, using `create_df` function in the `create_df.py` file, data is saved with `to_pickle` function as `.pickle` files that are named as `train_inputs` - `train_labels`, and `test_inputs` - `test_labels` in a desired folder. `--data_dir` option parameter holds the directory of the stored folder.
 
 ## Requirements
 
